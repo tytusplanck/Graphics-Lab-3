@@ -51,4 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e76d549f925a74c05ba3db1adabbcb35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrain: {fileID: 218605380940583676, guid: 8c4012c1bf18540868dd562ae13f48fb, type: 2}
+  tilePrefab: {fileID: 114219280330170688, guid: d0f54ec0f137d40a688524b898a545e9,
+    type: 2}
+  floorHeight: 12
+  floorWidth: 12

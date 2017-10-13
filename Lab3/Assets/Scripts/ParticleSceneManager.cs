@@ -9,7 +9,6 @@ public class ParticleSceneManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		floor = Instantiate(floorPrefab) as Floor;
-		floor.Awake();
 	}
 	
 	// Update is called once per frame
