@@ -10,9 +10,9 @@ public class Particle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GameObject ball = Instantiate(particle);
-		ball.transform.parent = transform;
-		ball.transform.localPosition = new Vector3(0, 1, 0);
+		//GameObject ball = Instantiate(particle);
+		particle.transform.parent = transform;
+		particle.transform.localPosition = new Vector3(0, 100, 0);
 	}
 	    
 	// Update is called once per frame
