@@ -8,7 +8,7 @@ public class Floor : MonoBehaviour {
      int terrainX; 
      int terrainY;
  
-     void Awake(){
+     public void Awake(){
          terrainX = terrain.terrainData.heightmapWidth;
          terrainY = terrain.terrainData.heightmapHeight;
          var heights = terrain.terrainData.GetHeights(0, 0, terrainX, terrainY);
