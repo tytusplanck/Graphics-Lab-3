@@ -11,7 +11,14 @@ public class ParticleSceneManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		floor = Instantiate(floorPrefab) as Floor;
-		ball = Instantiate(particlePrefab) as Particle;
+		int i = 0;
+		while (i < 20) {
+			ball = Instantiate(particlePrefab) as Particle;
+			ball.velocity.y = Random.Range(-20f, 0);
+			ball.velocity.x = Random.Range(0f, 2f);
+			i++;
+		}
+
 	}
 	
 	// Update is called once per frame
