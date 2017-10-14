@@ -17,12 +17,15 @@ public class Particle : MonoBehaviour {
 	    
 	// Update is called once per frame
 	void Update () {
-	
+
 		velocity.y -= gravity * Time.deltaTime;
 		transform.position += velocity * Time.deltaTime;
-		if (particle.transform.localPosition.y <= 0f) {
+		if (particle.transform.localPosition.y <= 0.0f && velocity.y < 0) {
 			velocity.y = -velocity.y;
-			WaitForEndOfFrame: {}
+		}
+		transform.localScale -= new Vector3(.005f,.005f,.005f);
+		if (transform.localScale.x < .1) {
+			Destroy(particle);
 		}
 		        
 	}
