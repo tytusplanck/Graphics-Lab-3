@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43667564, g: 0.48427147, b: 0.56452364, a: 1}
+  m_IndirectSpecularColor: {r: 0.44575256, g: 0.49546736, b: 0.57427675, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -158,6 +158,18 @@ Prefab:
       propertyPath: particlePrefab
       value: 
       objectReference: {fileID: 114917513991634988, guid: e00adc13e8bdd426481b3f373feba958,
+        type: 2}
+    - target: {fileID: 114231794264900192, guid: 56feda243bb8248a1a47942faae8e29a,
+        type: 2}
+      propertyPath: pyramidPrefab
+      value: 
+      objectReference: {fileID: 114718959471295888, guid: 5317e6eaa493f6c41a37737bbaa70732,
+        type: 2}
+    - target: {fileID: 114231794264900192, guid: 56feda243bb8248a1a47942faae8e29a,
+        type: 2}
+      propertyPath: emitterPrefab
+      value: 
+      objectReference: {fileID: 114538745138912242, guid: 23b705257ccfee6449f76f9ade9c5081,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56feda243bb8248a1a47942faae8e29a, type: 2}
@@ -299,20 +311,6 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_FalloffTable:
-    m_Table[0]: 0
-    m_Table[1]: 0
-    m_Table[2]: 0
-    m_Table[3]: 0
-    m_Table[4]: 0
-    m_Table[5]: 0
-    m_Table[6]: 0
-    m_Table[7]: 0
-    m_Table[8]: 0
-    m_Table[9]: 0
-    m_Table[10]: 0
-    m_Table[11]: 0
-    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -323,10 +321,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1305542920}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.44090784, y: -0, z: -0, w: 0.8975524}
   m_LocalPosition: {x: 24.61, y: -0.63, z: 15.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 52.324, y: 0, z: 0}

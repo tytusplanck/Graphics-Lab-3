@@ -10,10 +10,9 @@ public class Particle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//GameObject ball = Instantiate(particle);
-		particle.transform.parent = transform;
-		particle.transform.localPosition = new Vector3(25, 5, 20);
-	}
+        particle.transform.parent = transform;
+        particle.transform.localPosition = new Vector3(25, 15, 20);
+    }
 	    
 	// Update is called once per frame
 	void Update () {
@@ -26,8 +25,6 @@ public class Particle : MonoBehaviour {
 		transform.localScale -= new Vector3(.005f,.005f,.005f);
 		if (transform.localScale.x < .1) {
 			Destroy(particle);
-		}
-		        
+		}        
 	}
-
 }
