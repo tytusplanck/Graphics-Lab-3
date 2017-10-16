@@ -12,6 +12,11 @@ public class Emitter : MonoBehaviour {
     public int particleCount = 0;
     public bool sharedVertices = false;
 
+    public float adjustableDelay = 10F;
+
+    public float velYFirst = -20f;
+    public float velXSecond = 2f;
+
     public bool emitting = false;
 
     public void Awake() {
@@ -94,14 +99,15 @@ public class Emitter : MonoBehaviour {
     }
 
     IEnumerator delayTimer() {
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(adjustableDelay);
     }
 
 
     void createParticle() {
+        delayTimer();
         ball = Instantiate(particlePrefab) as Particle;
-        ball.velocity.y = Random.Range(-20f, 0);
-        ball.velocity.x = Random.Range(0f, 2f);
+        ball.velocity.y = Random.Range(velYFirst, 0);
+        ball.velocity.x = Random.Range(0f, velXSecond);
     }
 
     private void Update() {
@@ -116,6 +122,22 @@ public class Emitter : MonoBehaviour {
         }
         if(emitting) {
             createParticle();
+        }
+        if(Input.GetKeyDown(KeyCode.T)) {
+            velYFirst += 1F;
+            print(velYFirst);
+        }
+        if (Input.GetKeyDown(KeyCode.E)) {
+            velYFirst -= 1F;
+            print(velYFirst);
+        }
+        if (Input.GetKeyDown(KeyCode.D)) {
+            velXSecond += 1F;
+            print(velXSecond);
+        }
+        if (Input.GetKeyDown(KeyCode.G)) {
+            velXSecond -= 1F;
+            print(velXSecond);
         }
     }
 }
