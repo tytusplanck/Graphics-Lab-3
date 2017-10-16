@@ -12,6 +12,8 @@ public class Emitter : MonoBehaviour {
     public int particleCount = 0;
     public bool sharedVertices = false;
 
+    public bool emitting = false;
+
     public void Awake() {
         MeshFilter mFilter = GetComponent<MeshFilter>();
         if (mFilter == null) {
@@ -97,12 +99,23 @@ public class Emitter : MonoBehaviour {
 
 
     void createParticle() {
-        ball = Instantiate(particlePrefab, new Vector3(transform.position.x,transform.position.y, transform.position.z) , Quaternion.identity) as Particle;
+        ball = Instantiate(particlePrefab) as Particle;
         ball.velocity.y = Random.Range(-20f, 0);
         ball.velocity.x = Random.Range(0f, 2f);
     }
 
     private void Update() {
-        createParticle();
+        if (Input.GetKeyDown(KeyCode.R)) {
+            print("r was pressed");
+            if (emitting) {
+                emitting = false;
+            } else {
+                beginEmitting();
+                emitting = true;
+            }
+        }
+        if(emitting) {
+            createParticle();
+        }
     }
 }
